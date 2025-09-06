@@ -237,7 +237,7 @@
             <div class="contact-footer-container">
                 <div class="contact-section">
                     <h2>Write Message or Call</h2>
-                    <form action="https://script.google.com/macros/s/AKfycbyKKfimmHpKVm1usxJ8Kh9-R4Og58MIk6fwx1k-_QbDOY0AY-KAteGHYx2CKkd0vA9vIw/exec" method="POST" class="contact-form" id="form">
+                    <form method="POST" action="https://script.google.com/macros/s/AKfycbxgv0jplVfNvU5yBGqjUlpjfpa80n76vP6oTOm-hwmO2zduIGbuVNkkr7STm61S-qoBQA/exec" class="contact-form" id="form">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="fullname" required autocomplete="off">
                         
@@ -317,23 +317,7 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
-    // Form submission handling
-    document.getElementById('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Simple form validation
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        if (name && email && message) {
-            // In a real scenario, you would submit to the Google Apps Script
-            alert('Form submitted successfully!');
-            this.reset();
-        } else {
-            alert('Please fill all required fields.');
-        }
-    });
+    <!-- -->
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -351,6 +335,9 @@
             }
         });
     });
+    if(name!="" && phone!="" && email!="" && message!=""){
+        alert("Message sent successfully");
+    }
 </script>
 </body>
 </html>
